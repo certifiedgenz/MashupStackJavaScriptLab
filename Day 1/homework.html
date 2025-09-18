@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <script>
+        var priceOfRice = 110;
+        var priceOfSugar = 40;
+        var priceOfWheat = 50;
+        var quantityOfRice = 3;
+        var quantityOfSugar = 5;
+        var quantityOfWheat = 7;
+        var costOfRice = priceOfRice*quantityOfRice;
+        var costOfSugar = priceOfSugar*quantityOfSugar;
+        var costOfWheat = priceOfWheat*quantityOfWheat;
+        var totalCost = costOfRice+costOfSugar+costOfWheat;
+
+        console.log("The total bill for Rice + Sugar + Wheat is: "+totalCost);
+
+        priceOfRice = 150;
+        costOfRice = priceOfRice*quantityOfRice;
+        totalCost = costOfRice+costOfSugar+costOfWheat;
+        console.log("The new total bill for Rice + Sugar + Wheat is: "+totalCost);
+    </script>
+</body>
+</html>
