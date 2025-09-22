@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day 3 Classwork</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        var feedback = " I loved the FOOD and the service! ";
+      var feedback = " I loved the FOOD and the service! ";
+      var feedbackWithoutSpace = feedback.trim();
+      var feedbackLowerCase = feedbackWithoutSpace.toLowerCase();
+      var feedbackReplaced = feedbackLowerCase.replace("food", "ambience");
 
-        var feedbackWithoutSpace = feedback.trim();
+      console.log(
+        "The position of the word service is " +
+          feedbackReplaced.indexOf("service")
+      );
 
-        var feedbackLowerCase = feedbackWithoutSpace.toLowerCase();
+      var feedbackArray = feedbackReplaced.split("");
 
-        var feedbackReplaced = feedbackLowerCase.replace("food","ambience");
-
-        console.log("The position of the word service is "+ feedbackReplaced.indexOf("service"));
-
-        var feedbackArray = feedbackReplaced.split("");
-
-        for(var i = 0; i<feedbackArray.length;i++){
-            document.write(feedbackArray[i]+"<br>");
-        }
-
+      for (var i = 0; i < feedbackArray.length; i++) {
+        document.write(feedbackArray[i] + "<br>");
+      }
     </script>
-</body>
+  </body>
 </html>

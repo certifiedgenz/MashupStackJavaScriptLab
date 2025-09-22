@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Homework</title>
+</head>
+<body>
+    <script>
+        var userProfile={
+            username: "CoolUser99",
+            bio: "I LOVE Coding! JavaScript is Great!!!"
+        }
+
+        function cleanUserBio(profile){
+            var trimmedUsername = profile.username.trim();
+            var cleanUsername = trimmedUsername.toLowerCase();
+            var trimmedBio = profile.bio.trim();
+            var cleanBio = trimmedBio.toLowerCase();
+            var shortenedBio = cleanBio.replace(/JavaScript/i,"JS");
+            var lengthOfBio = shortenedBio.length;
+
+            var cleanUserProfile={
+                cleanUsername,
+                shortenedBio,
+                lengthOfBio
+            }
+            return cleanUserProfile;
+        }
+
+        var cleanUserProfile = cleanUserBio(userProfile);
+        console.log(`The new clean Username is: ${cleanUserProfile.cleanUsername}`);
+        console.log(`The new clean Bio is: ${cleanUserProfile.shortenedBio}`);
+        console.log(`The length of the Bio after cleanup is: ${cleanUserProfile.lengthOfBio}`);
+    </script>
+</body>
+</html>
