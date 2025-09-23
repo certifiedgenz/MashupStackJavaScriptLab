@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Homework</title>
+</head>
+<body>
+    <script>
+        var randomNumber = Math.floor(Math.random()*100/2);
+        console.log(`Your mystery level is ${randomNumber}`);
+        var inputScore = Number(prompt("Enter the score!"));
+        var absDifference = Math.abs(randomNumber-inputScore);
+        console.log(`The absolute difference between mystery level and input score is ${absDifference}`);
+        var rootOfInputScore = Math.sqrt(inputScore);
+        console.log(`The root of the input score is ${rootOfInputScore}`);
+        console.log(`The value of pi is ${Math.PI}`);
+        console.log(`Implicit conversion and multiplication is ${'20'*5}`)
+        console.log(`Max value is ${Math.max(10,20,randomNumber)}`);
+        console.log(`Min value is ${Math.min(10,20,randomNumber)}`);
+    </script>
+</body>
+</html>
