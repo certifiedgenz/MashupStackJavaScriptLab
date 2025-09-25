@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Classwork</title>
+</head>
+<body>
+    <button onclick="orderCheck(order);">
+        Click me
+    </button>
+    <script>
+        var order = {
+            itemName: "Tab",
+            isDelivered: true,
+            daysSinceDelivery: 7
+        }
+
+        function orderCheck(orderDetails){
+            var productDelivered = (orderDetails.isDelivered==true) ? "The product has been delivered":"The product was not delivered";
+            console.log(productDelivered);
+            var returnPolicy = (orderDetails.isDelivered==true&&orderDetails.daysSinceDelivery<=7) ? "Eligible for return":"Return Period Expired";
+            console.log(returnPolicy);
+            console.log("Does itemName exist in order? ", ("itemName" in orderDetails));
+            delete orderDetails.daysSinceDelivery;
+            console.log(orderDetails);
+        }
+    </script>
+</body>
+</html>
