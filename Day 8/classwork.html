@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 Classwork</title>
+</head>
+<body>
+    <script>
+        let numberOfPurchases = 1;
+        let prodName = "";
+        let prodAmt = 0;
+        let totalAmount = 0;
+        console.log(`Product List`)
+        while(numberOfPurchases<=5){
+            let prodCode = Number(prompt(`Enter the product code`));
+            switch(prodCode){
+                case 1: prodName = "Apple"; prodAmt = 30;
+                break;
+                case 2: prodName = "Banana"; prodAmt = 10;
+                break;
+                case 3: prodName = "Mango"; prodAmt = 50;
+                break;
+                default: continue;
+            }
+            let prodQuantity = Number(prompt(`Enter the quantity of ${prodName}`));
+            console.log(`${numberOfPurchases}: Product Name: ${prodName}, Product Amount: ${prodAmt}, Quantity: ${prodQuantity}`);
+            totalAmount = totalAmount + (prodAmt*prodQuantity);
+            numberOfPurchases++;
+        }
+        if(totalAmount>100){
+            console.log(`High purchase`);
+        }
+        else{
+            console.log(`Normal purchase`);
+        }
+        console.log(`The total amount is ${totalAmount}`);
+        
+    </script>
+</body>
+</html>
