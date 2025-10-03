@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 8 Homework</title>
+  </head>
+  <body>
+    <script>
+      let chances = 1;
+      let userNumber = "";
+
+      while (chances <= 5) {
+        let userInput = Number(prompt(`Enter a number between 1 and 5`));
+
+        switch (userInput) {
+          case 1:
+            userNumber = "One";
+            break;
+          case 2:
+            userNumber = "Two";
+            break;
+          case 3:
+            userNumber = "Three";
+            break;
+          case 4:
+            userNumber = "Four";
+            break;
+          case 5:
+            userNumber = "Five";
+            break;
+          default:
+            window.alert(`Enter the correct value`);
+            chances++;
+            continue;
+        }
+
+        if (userInput === 3) {
+          window.alert(`You entered the correct number ${userNumber}`);
+          break;
+        }
+
+        chances++;
+      }
+
+      window.alert(`Game Over`);
+    </script>
+  </body>
+</html>
