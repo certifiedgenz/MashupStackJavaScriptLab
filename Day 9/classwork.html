@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 Classwork</title>
+</head>
+<body>
+    <script>
+        function checkComment(sentence){
+            let containsNumber = false;
+            let newSentence = "";
+            if(sentence.match(/[0-9]/g)!=null){
+                containsNumber = true;
+                newSentence = sentence.replace(/[0-9]+/g,"NUMBER");
+            }
+            return {containsNumber,newSentence};
+        }
+        let testComment = checkComment("My son is 12 years old. Our flat number is 45 and contact is 9876543210.");
+        console.log(`Is there a number present? ${testComment.containsNumber}`);
+        console.log(`Changed sentence: ${testComment.newSentence}`);
+    </script>
+</body>
+</html>

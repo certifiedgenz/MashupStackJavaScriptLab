@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9 Homework</title>
+</head>
+<body>
+    <script>
+        function commentFilter(comment){
+            let newComment = "";
+            //if(comment.match(/bad/i)!=null||comment.match(/ugly/i)!=null||comment.match(/stupid/i)!=null){
+                newComment = comment.replace(/bad/gi,"***");
+                newComment = newComment.replace(/ugly/gi,"***");
+                newComment = newComment.replace(/stupid/gi,"***");
+            //}
+            let noOfNumbers = newComment.match(/[0-9]/g).length;
+            let noOfCapitals = newComment.match(/[A-Z]/g).length;
+            
+            return {newComment,noOfNumbers,noOfCapitals};
+
+        }
+        let checkComment = commentFilter("I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great.");
+        console.log(`Total number count: ${checkComment.noOfNumbers}`);
+        console.log(`Total capitals count: ${checkComment.noOfCapitals}`);
+        console.log(`Filtered Comment: ${checkComment.newComment}`);
+    </script>
+</body>
+</html>
