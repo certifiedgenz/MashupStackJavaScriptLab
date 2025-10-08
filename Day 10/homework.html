@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 10 Homework</title>
+  </head>
+  <body>
+    <script>
+      let jsonFeedback = `{
+    "name": "Suhail Khan",
+    "feedback": "Thank you for your help!"
+}`;
+
+      let checkFeedback = () => {
+        try {
+          let data = JSON.parse(jsonFeedback);
+          if (/thank/i.test(data.feedback)) {
+            console.log("Positive feedback received");
+          } else {
+            console.log("Feedback noted");
+          }
+        } catch (error) {
+          console.log("Invalid JSON data");
+        }
+      };
+
+      checkFeedback();
+    </script>
+  </body>
+</html>
